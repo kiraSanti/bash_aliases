@@ -1,55 +1,57 @@
 #MISCELANEOUS
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias lsa=' ls -AlhiS'
-alias hello='helloScriptK.sh'
-alias kirita='kiritaK.sh'
-alias zeus='zeusK.sh'
-alias vietnam="vietnamK.sh"
-alias tree2='tree -L 2'
-alias search='lsa | less -I'
-alias ksh='lsa | grep -E K[.]sh$'
+alias lsa=' ls -AlhiS' # Displays all the files on the current directory with details
+alias hello='helloScriptK.sh'  # Executes the helloScriptK.sh script
+alias kirita='kiritaK.sh' # Executes the kiritaK.sh script
+alias zeus='zeusK.sh' # Executes the zeusK.sh script
+alias vietnam="vietnamK.sh" # Executes the vietnam.sh script
+alias tree2='tree -L 2' # Executes the tree command in 2 levels deep
+alias search='lsa | less -I' # Redirects the 'lsa' command to the 'less' command
+                             # to search on Stdout produced by 'lsa' command (-I --> no case sensitive)
 
 #GO-TO's
-alias gomusik='cd / && cd musik'
-alias godesk='cd / && cd desk'
-alias goexe='cd / && cd usr/bin'
-alias gokexe='cd / && cd /home/kira/bin'
-alias goaka='cd / && cd /home/kira/.bash_aliases'
+alias goexe='cd / && cd usr/bin' # Changes directory to specified path
+alias gokexe='cd / && cd /home/kira/bin' # Changes directory to specified path
+alias goaka='cd / && cd /home/kira/.bash_aliases' # Changes directory to specified path
 
 #NEW SCRIPT
-alias mkexe='mkexeK.sh'
-alias mkglobal='mkglobalK.sh'
-alias newsh='newshK.sh'
+alias mkexe='mkexeK.sh' # Executes the mkexeK.sh script
+alias mkglobal='mkglobalK.sh' # Executes the mkglobalK.sh script
+alias newsh='newshK.sh' # Executes the newshK.sh script
 
 #BOOTING
-alias newday='clear && cd /home/kira/bin/newDay && newdayK.sh'
+alias newday='clear && newdayK.sh' # Cleans screen and executes the newdayK.sh script
 
 
 #GIT
-alias giti='git init'
-alias gita='git add'
-alias gits='git status'
-alias gitl='git log'
-alias gitlo='git log --oneline'
-alias gitlon='git log --oneline --name-only'
-alias gitrfl='git reflog'
-alias gitos='git restore --staged'
-alias gitosn='git rm --cached'
-alias gitd='git diff'
-alias gitc='git commit'
-alias gitch='git checkout'
-alias gitres='git reset'
-alias gitrest='git restore'
-alias gitac='git commit -a'
-alias gitbr='git branch'
-alias gitsh='git show'
-alias gitag='git tag'
-alias gitagr='git show-ref --tags'
-alias gitagn='git tag -n'
-alias gitr='git remote -v'
-alias gitor='git remote add origin'
-alias gitpl='git pull origin'
-alias gitps='git push origin'
-alias gitmain='gitbr -M main'
+alias giti='git init' # Initializes new local git repo
+alias gita='git add' # Adds specified files to the commit area
+alias gits='git status' # Shows overall status 
+alias gitl='git log' # Displays all the commits 
+alias gitlo='git log --oneline' # Displays all the commits in a short way 
+alias gitlon='git log --oneline --name-only' # Same as 'gitlo' but it also shows the files involved on each of the commits
+alias gitos='git restore --staged' # Takes specified tracked files out of the staging area
+alias gitosu='git rm --cached' # Takes specified untracked files out of the staging area
+alias gitd='git diff' # Shows differences between 2 specified commits
+alias gitc='git commit' # Commits changes in local repo
+alias gitch='git checkout' # Used to change to the specified branch
+                           # or to take a look on how was a specified file in a specified commit (Note: specify first the commit and then the file name)
+alias gitres='git reset' # Takes HEAD back to the specified commit (use -soft / -mixed / -hard as convenient)
+alias gitrest='git restore' # Discard changes of the specified file (not on the staging area yet)
+alias gitac='git commit -a' # Adds everything to the staging area and commit the changes
+                            # (if no -m "message" specified it'll be redirect to nano text editor to add a commit message)
+alias gitbr='git branch' # Shows all local branches (add -r to get remote and -a to get all branches)
+alias gitsh='git show' # Shows the last commit or the specified one (commit id)
+alias gitag='git tag' # just a shortcut (most likely I might put:  "  -a tag name -m "tag message"  " to create a new tag after it)
+alias gitagr='git show-ref --tags' # Displays existing tags with their reference id 
+alias gitagn='git tag -n' # Displays existing tags with their names and messages
+alias gitr='git remote -v' # Displays pull/push url assigned as origin 
+alias gitor='git remote add origin' # Sets url as origin to pull/push commits (Enter remote repo url here)
+alias gitpl='git pull origin' # Retrieve last updates from remote repo to local repo (Enter branch name here)
+alias gitps='git push origin' # Sends local changes to remote repo (Enter branch name here)
+alias gitmain='gitbr -M main' # Renames 'Master' branch that gets created by default when initializing a new repo
+alias gitashsv='git stash save' # Creates a new stash ("Enter Stash Name Here")
+alias gitashls='git stash list' # Shows array of stashes
+alias gitashap='git stash apply' # Applies the stash on the "0" position or the specified one (stash@{index}), and keeps it
+alias gitashp='git stash pop' # Applies the stash on the "0" position or the specified one (stash@{index}), and deletes it
+alias gitashdr='git stash drop' # Deletes the stash on the "0" position or the specified one (stash@{index})
+alias gitashcl='git stash clear' # Deletes all stashes
