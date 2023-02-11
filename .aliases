@@ -12,6 +12,7 @@ alias search='lsa | less -I' # Redirects the 'lsa' command to the 'less' command
 alias goexe='cd / && cd usr/bin' # Changes directory to specified path
 alias gokexe='cd / && cd /home/kira/bin' # Changes directory to specified path
 alias goaka='cd / && cd /home/kira/.bash_aliases' # Changes directory to specified path
+alias goass='cd / && cd /mnt/c/Users/casab/OneDrive/Escritorio/Assets/' # Changes directory to specified path
 
 #NEW SCRIPT
 alias mkexe='mkexeK.sh' # Executes the mkexeK.sh script
